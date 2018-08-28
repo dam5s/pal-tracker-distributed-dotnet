@@ -53,7 +53,7 @@ insert into projects (id, account_id, name) values (22, 1, 'aProject');");
             Assert.Equal(22, actual.Id);
             Assert.Equal(1, actual.AccountId);
             Assert.Equal("aProject", actual.Name);
-            Assert.Equal(true, actual.Active);
+            Assert.True(actual.Active);
         }
 
         [Fact]
@@ -71,7 +71,7 @@ insert into projects (id, account_id, name, active) values (22, 1, 'aProject', t
             Assert.Equal(22, actual.Id);
             Assert.Equal(1, actual.AccountId);
             Assert.Equal("aProject", actual.Name);
-            Assert.Equal(true, actual.Active);
+            Assert.True(actual.Active);
 
             Assert.Null(gateway.FindObject(23));
         }

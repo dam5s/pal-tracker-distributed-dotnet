@@ -30,7 +30,7 @@ namespace ProjectsTest
             Assert.Equal(123, body.Id);
             Assert.Equal(1673, body.AccountId);
             Assert.Equal("aProject", body.Name);
-            Assert.Equal(true, body.Active);
+            Assert.True(body.Active);
             Assert.Equal("project info", body.Info);
         }
 
@@ -47,7 +47,7 @@ namespace ProjectsTest
             Assert.Equal(55431, body.Id);
             Assert.Equal(1673, body.AccountId);
             Assert.Equal("aProject", body.Name);
-            Assert.Equal(true, body.Active);
+            Assert.True(body.Active);
         }
 
         [Fact]
@@ -79,12 +79,12 @@ namespace ProjectsTest
             Assert.Equal(55431, body[0].Id);
             Assert.Equal(1673, body[0].AccountId);
             Assert.Equal("aProject", body[0].Name);
-            Assert.Equal(false, body[0].Active);
+            Assert.False(body[0].Active);
             
             Assert.Equal(55432, body[1].Id);
             Assert.Equal(1673, body[1].AccountId);
             Assert.Equal("anotherProject", body[1].Name);
-            Assert.Equal(true, body[1].Active);
+            Assert.True(body[1].Active);
         }
     }
 }

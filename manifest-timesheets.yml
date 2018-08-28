@@ -5,7 +5,7 @@ applications:
   memory: 256M
   routes:
   - route: timesheets-pal-INITIALS.apps.pikes.pal.pivotal.io
-  path: Applications/TimesheetsServer/bin/Release/netcoreapp2.0/publish
+  path: Applications/TimesheetsServer/bin/Release/netcoreapp2.1/publish
   env:
     REGISTRATION_SERVER_ENDPOINT: http://FILL_ME_IN/
   services:

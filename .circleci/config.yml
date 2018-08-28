@@ -83,8 +83,8 @@ jobs:
             cd $EXTRACT_DEST
 
             cf login -a $CF_API -u $CF_USERNAME -p $CF_PASSWORD -o $CF_ORG -s sandbox
-            cf push -f manifest-allocations.yml
             ./migrate-databases.sh tracker-allocations /tmp/extracted-archive/migrations /root/project
+            cf push -f manifest-allocations.yml
 
   deployBacklog:
     docker:
@@ -123,8 +123,8 @@ jobs:
             cd $EXTRACT_DEST
 
             cf login -a $CF_API -u $CF_USERNAME -p $CF_PASSWORD -o $CF_ORG -s sandbox
-            cf push -f manifest-backlog.yml
             ./migrate-databases.sh tracker-backlog /tmp/extracted-archive/migrations /root/project
+            cf push -f manifest-backlog.yml
 
   deployRegistration:
     docker:
@@ -163,8 +163,8 @@ jobs:
             cd $EXTRACT_DEST
 
             cf login -a $CF_API -u $CF_USERNAME -p $CF_PASSWORD -o $CF_ORG -s sandbox
-            cf push -f manifest-registration.yml
             ./migrate-databases.sh tracker-registration /tmp/extracted-archive/migrations /root/project
+            cf push -f manifest-registration.yml
 
   deployTimesheets:
     docker:
@@ -203,8 +203,8 @@ jobs:
             cd $EXTRACT_DEST
 
             cf login -a $CF_API -u $CF_USERNAME -p $CF_PASSWORD -o $CF_ORG -s sandbox
-            cf push -f manifest-timesheets.yml
             ./migrate-databases.sh tracker-timesheets /tmp/extracted-archive/migrations /root/project
+            cf push -f manifest-timesheets.yml
 
 
 workflows:
